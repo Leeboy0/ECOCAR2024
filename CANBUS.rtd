@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.9" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="2.1.0"><![CDATA[/opt/rtmaps/packages/rtmaps_can_SocketCAN.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_can_SocketCAN.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="CANFrameViewer_1" Model="CANFrameViewer" Version="1.5.3" x="576" y="336" z="0">
+    <Input LongName="CANFrameViewer_1.input0" Name="input0">
+      <Property LongName="CANFrameViewer_1.input0.readerType" Type="1">0</Property>
+      <Property LongName="CANFrameViewer_1.input0.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="CANFrameViewer_1.nbInputs" Type="1">1</Property>
+    <Property LongName="CANFrameViewer_1.nbMaxFrames" Type="1">0</Property>
+    <ReadOnlyProperty LongName="CANFrameViewer_1.resize" Type="0">true</ReadOnlyProperty>
+    <Property LongName="CANFrameViewer_1.title" Type="3"><![CDATA[CAN frame viewer]]></Property>
+    <Property LongName="CANFrameViewer_1.x" Type="1">732</Property>
+    <Property LongName="CANFrameViewer_1.y" Type="1">362</Property>
+    <Property LongName="CANFrameViewer_1.width" Type="1">639</Property>
+    <Property LongName="CANFrameViewer_1.height" Type="1">165</Property>
+    <Property LongName="CANFrameViewer_1.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_1.priority" Type="1">128</Property>
+    <Property LongName="CANFrameViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CANFrameViewer_2" Model="CANFrameViewer" Version="1.5.3" x="720" y="576" z="0">
+    <Input LongName="CANFrameViewer_2.input0" Name="input0">
+      <Property LongName="CANFrameViewer_2.input0.readerType" Type="1">0</Property>
+      <Property LongName="CANFrameViewer_2.input0.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="CANFrameViewer_2.nbInputs" Type="1">1</Property>
+    <Property LongName="CANFrameViewer_2.nbMaxFrames" Type="1">0</Property>
+    <ReadOnlyProperty LongName="CANFrameViewer_2.resize" Type="0">true</ReadOnlyProperty>
+    <Property LongName="CANFrameViewer_2.title" Type="3"><![CDATA[CAN frame viewer]]></Property>
+    <Property LongName="CANFrameViewer_2.x" Type="1">67</Property>
+    <Property LongName="CANFrameViewer_2.y" Type="1">145</Property>
+    <Property LongName="CANFrameViewer_2.width" Type="1">639</Property>
+    <Property LongName="CANFrameViewer_2.height" Type="1">165</Property>
+    <Property LongName="CANFrameViewer_2.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_2.threaded" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_2.priority" Type="1">128</Property>
+    <Property LongName="CANFrameViewer_2.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="RandomCANFrames_1" Model="RandomCANFrames" Version="2.5.0" x="344" y="336" z="0">
+    <Output LongName="RandomCANFrames_1.output" Name="output">
+      <Property LongName="RandomCANFrames_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="RandomCANFrames_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="RandomCANFrames_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="RandomCANFrames_1.can_fd" Type="0">false</Property>
+    <Property LongName="RandomCANFrames_1.output_as_uniframe" Type="0">false</Property>
+    <Property LongName="RandomCANFrames_1.interval" Type="1">1000000</Property>
+    <Property LongName="RandomCANFrames_1.extended" Type="0">false</Property>
+    <Property LongName="RandomCANFrames_1.dataLength" Type="1">8</Property>
+    <Property LongName="RandomCANFrames_1.variableDataLength" Type="0">false</Property>
+    <Property LongName="RandomCANFrames_1.nbMaxFramesIdentifiers" Type="1">10</Property>
+    <Property LongName="RandomCANFrames_1.timingsFrames" Type="0">false</Property>
+    <Property LongName="RandomCANFrames_1.vectorSize" Type="1">1</Property>
+    <Property LongName="RandomCANFrames_1.threaded" Type="0">true</Property>
+    <Property LongName="RandomCANFrames_1.priority" Type="1">128</Property>
+    <Property LongName="RandomCANFrames_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="SocketCAN_1" Model="SocketCAN" Version="1.0.1" x="496" y="192" z="0">
+    <Input LongName="SocketCAN_1.input" Name="input">
+      <Property LongName="SocketCAN_1.input.readerType" Type="1">0</Property>
+      <Property LongName="SocketCAN_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="SocketCAN_1.output" Name="output">
+      <Property LongName="SocketCAN_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="SocketCAN_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="SocketCAN_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="SocketCAN_1.interface" Type="3"><![CDATA[can4]]></Property>
+    <Property LongName="SocketCAN_1.baudrate" Type="4"><![CDATA[8|5|1000000|500000|250000|125000|100000|50000|20000|10000]]></Property>
+    <Property LongName="SocketCAN_1.RXpollingPeriod" Type="1">5000</Property>
+    <Property LongName="SocketCAN_1.framesType" Type="4"><![CDATA[2|0|Standard|Extended]]></Property>
+    <Property LongName="SocketCAN_1.vectorizeCANframes" Type="0">false</Property>
+    <Property LongName="SocketCAN_1.listen_only" Type="0">false</Property>
+    <Property LongName="SocketCAN_1.verbose" Type="0">false</Property>
+    <Property LongName="SocketCAN_1.nb_filters" Type="1">0</Property>
+    <Property LongName="SocketCAN_1.threaded" Type="0">true</Property>
+    <Property LongName="SocketCAN_1.priority" Type="1">255</Property>
+    <Property LongName="SocketCAN_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="SocketCAN_2" Model="SocketCAN" Version="1.0.1" x="432" y="576" z="0">
+    <Input LongName="SocketCAN_2.input" Name="input">
+      <Property LongName="SocketCAN_2.input.readerType" Type="1">0</Property>
+      <Property LongName="SocketCAN_2.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="SocketCAN_2.output" Name="output">
+      <Property LongName="SocketCAN_2.output.subsampling" Type="1">1</Property>
+      <Property LongName="SocketCAN_2.output.fifosize" Type="1">16</Property>
+      <Property LongName="SocketCAN_2.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="SocketCAN_2.interface" Type="3"><![CDATA[can5]]></Property>
+    <Property LongName="SocketCAN_2.baudrate" Type="4"><![CDATA[8|5|1000000|500000|250000|125000|100000|50000|20000|10000]]></Property>
+    <Property LongName="SocketCAN_2.RXpollingPeriod" Type="1">5000</Property>
+    <Property LongName="SocketCAN_2.framesType" Type="4"><![CDATA[2|0|Standard|Extended]]></Property>
+    <Property LongName="SocketCAN_2.vectorizeCANframes" Type="0">false</Property>
+    <Property LongName="SocketCAN_2.listen_only" Type="0">false</Property>
+    <Property LongName="SocketCAN_2.verbose" Type="0">false</Property>
+    <Property LongName="SocketCAN_2.nb_filters" Type="1">0</Property>
+    <Property LongName="SocketCAN_2.threaded" Type="0">true</Property>
+    <Property LongName="SocketCAN_2.priority" Type="1">255</Property>
+    <Property LongName="SocketCAN_2.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="RandomCANFrames_1.output" Input="CANFrameViewer_1.input0"/>
+  <Connection Output="SocketCAN_2.output" Input="CANFrameViewer_2.input0"/>
+  <Connection Output="RandomCANFrames_1.output" Input="SocketCAN_1.input"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_2.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_1.input0" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_2.input0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_3.input" color="0"/>
+    <ConnectionShape InstanceName="Labelizer_1.inputGray" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Overlay_1.images" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.input" color="0"/>
+    <ConnectionShape InstanceName="SocketCAN_1.input" color="0"/>
+    <ConnectionShape InstanceName="SocketSender_1.input0" color="0"/>
+    <ConnectionShape InstanceName="Splitter_1.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_2.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_3.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

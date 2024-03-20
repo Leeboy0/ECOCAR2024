@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.9" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="4.7.0"><![CDATA[/opt/rtmaps/packages/rtmaps_canfd_processing.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_canfd_processing.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="CANFDEncoder_1" Model="CANFDEncoder" Version="2.43.0" x="752" y="368" z="0">
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive" Name="TrackedVehicle_8_TrkVeh_TrkActive">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate" Name="TrackedVehicle_8_TrkVeh_LongRangeRate">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset" Name="TrackedVehicle_8_TrkVeh_LongOffset">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate" Name="TrackedVehicle_8_TrkVeh_LatRangeRate">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset" Name="TrackedVehicle_8_TrkVeh_LatOffset">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath" Name="TrackedVehicle_8_TrkVeh_InPath">
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_StatusMaster_STATUS8" Name="iPDS_StatusMaster_STATUS8">
+      <Property LongName="CANFDEncoder_1.iPDS_StatusMaster_STATUS8.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_StatusMaster_STATUS8.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18" Name="iPDS_StatusSlave1_STATUS18">
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28" Name="iPDS_StatusSlave2_STATUS28">
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48" Name="iPDS_StatusSlave3_STATUS48">
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38" Name="iPDS_StatusSlave3_STATUS38">
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28" Name="iPDS_Current1Slave2_CURRENT28">
+      <Property LongName="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38" Name="iPDS_Current1Slave3_CURRENT38">
+      <Property LongName="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_Current2Master_CURRENT8" Name="iPDS_Current2Master_CURRENT8">
+      <Property LongName="CANFDEncoder_1.iPDS_Current2Master_CURRENT8.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_Current2Master_CURRENT8.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18" Name="iPDS_Current2Slave1_CURRENT18">
+      <Property LongName="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48" Name="iPDS_Current3Slave3_CURRENT48">
+      <Property LongName="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48.readerType" Type="1">0</Property>
+      <Property LongName="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="CANFDEncoder_1.oCANFDFrame" Name="oCANFDFrame">
+      <Property LongName="CANFDEncoder_1.oCANFDFrame.subsampling" Type="1">1</Property>
+      <Property LongName="CANFDEncoder_1.oCANFDFrame.fifosize" Type="1">16</Property>
+      <Property LongName="CANFDEncoder_1.oCANFDFrame.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="CANFDEncoder_1.output_as_uniframe" Type="0">false</Property>
+    <Property LongName="CANFDEncoder_1.database" Type="3" SubType="80"><![CDATA[/home/autera-admin/Downloads/EVC_DataLogging_Rev1.dbc]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../Downloads/EVC_DataLogging_Rev1.dbc]]></Relative></Property>
+    <ReadOnlyProperty LongName="CANFDEncoder_1.available" Type="3"><![CDATA[DriverInterface_BrakeLights_Illuminated
+DriverInterface_SteeringWheelAngle
+DriverInterface_DriverRangeSelected
+DriverInterface_DriverDemandedAxleTrq
+DriverInterface_BrakePdlPos
+DriverInterface_BrakeOn
+DriverInterface_AccelPdlPos
+SwitchStatus_LowSpeed_RegenBrakingSwitchStatus
+SwitchStatus_LowSpeed_PropSysActive
+SwitchStatus_LowSpeed_DriverSeatOccupied
+FrontMotorData_F_InvCurr_DC
+FrontMotorData_F_DrvRatio
+FrontMotorData_F_MotTrq
+FrontMotorData_F_MotTmp
+FrontMotorData_F_InvTmp
+FrontMotorData_F_MotSpd
+RearMotorData_R_MotTmp
+RearMotorData_R_DrvRatio
+RearMotorData_R_InvCurr_DC
+RearMotorData_R_MotTrq
+RearMotorData_R_MotSpd
+RearMotorData_R_InvTmp
+VehicleSpeeds_VehSpd_VCU
+VehicleSpeeds_WheelSpeed_RR
+VehicleSpeeds_WheelSpeed_RL
+VehicleSpeeds_WheelSpeed_FR
+VehicleSpeeds_WheelSpeed_FL
+RESSData_RESS_Voltage
+RESSData_RESS_Temp
+RESSData_RESS_SOC
+RESSData_RESS_Current
+VehicleLevelData_LngAccel
+VehicleLevelData_LatAccel
+VehicleLevelData_VehSpd_GPS
+VehicleLevelData_RMot_ClutchState
+VehicleLevelData_RMot_ClutchCmd
+VehicleLevelData_FMot_ClutchState
+VehicleLevelData_FMot_ClutchCmd
+CAVSwitchStatus_AutoParkSystemStatus
+CAVSwitchStatus_LCC_SystemStatus
+CAVSwitchStatus_AINSystemStatus
+CAVSwitchStatus_ACC_SystemStatus
+CAVSwitchStatus_V2XSwitchStatus
+CAVSwitchStatus_LongCtrlSwitch
+CAVSwitchStatus_LatCtrlSwitch
+iPDS_RelayRequest_REQUEST
+iPDS_RelayRequest_CHANNEL
+ACC_PerformanceData_ACC_SetSpeed
+ACC_PerformanceData_ACC_TargetRange
+ACC_PerformanceData_ACC_TargetRangeRate
+iPDS_ModeRequest_MODE
+LCC_PerformanceData_LCC_LaneDetected
+LCC_PerformanceData_LCC_CurrentLaneCurvature
+LCC_PerformanceData_LCC_CenterLineDeviation
+iPDS_ScriptRequest_SCRIPT
+V2X_SystemData_V2XDistToSignal
+V2X_SystemData_V2X_TimeToNextPhase
+V2X_SystemData_V2X_NextPhase
+iPDS_Reserved1_RESERVED1
+iPDS_StatusMaster_STATUS12
+iPDS_StatusMaster_STATUS11
+iPDS_StatusMaster_STATUS10
+iPDS_StatusMaster_STATUS9
+iPDS_StatusMaster_STATUS8
+iPDS_StatusMaster_STATUS7
+iPDS_StatusMaster_STATUS6
+iPDS_StatusMaster_STATUS5
+iPDS_StatusMaster_STATUS4
+iPDS_StatusMaster_STATUS3
+iPDS_StatusMaster_STATUS2
+iPDS_StatusMaster_STATUS1
+iPDS_StatusMaster_SCRIPT
+iPDS_StatusMaster_MODE
+iPDS_StatusMaster_INV1_OVERTEMP
+iPDS_StatusMaster_INV1_OVERLOAD
+iPDS_StatusMaster_INV1_STATUS
+iPDS_StatusMaster_INV1_REQUEST
+iPDS_StatusMaster_REVISION
+TrackedVehicle_1_TrkVeh_TrkActive
+TrackedVehicle_1_TrkVeh_InPath
+TrackedVehicle_1_TrkVeh_LongOffset
+TrackedVehicle_1_TrkVeh_LongRangeRate
+TrackedVehicle_1_TrkVeh_LatRangeRate
+TrackedVehicle_1_TrkVeh_LatOffset
+iPDS_StatusSlave1_STATUS24
+iPDS_StatusSlave1_STATUS23
+iPDS_StatusSlave1_STATUS22
+iPDS_StatusSlave1_STATUS21
+iPDS_StatusSlave1_STATUS20
+iPDS_StatusSlave1_STATUS19
+iPDS_StatusSlave1_STATUS18
+iPDS_StatusSlave1_STATUS17
+iPDS_StatusSlave1_STATUS16
+iPDS_StatusSlave1_STATUS15
+iPDS_StatusSlave1_STATUS14
+iPDS_StatusSlave1_STATUS13
+iPDS_StatusSlave1_SCRIPT
+iPDS_StatusSlave1_MODE
+iPDS_StatusSlave1_INV2_OVERTEMP
+iPDS_StatusSlave1_INV2_OVERLOAD
+iPDS_StatusSlave1_INV2_STATUS
+iPDS_StatusSlave1_INV2_REQUEST
+iPDS_StatusSlave1_REVISION
+TrackedVehicle_2_TrkVeh_TrkActive
+TrackedVehicle_2_TrkVeh_LongRangeRate
+TrackedVehicle_2_TrkVeh_LongOffset
+TrackedVehicle_2_TrkVeh_LatRangeRate
+TrackedVehicle_2_TrkVeh_LatOffset
+TrackedVehicle_2_TrkVeh_InPath
+iPDS_StatusSlave2_STATUS36
+iPDS_StatusSlave2_STATUS35
+iPDS_StatusSlave2_STATUS34
+iPDS_StatusSlave2_STATUS33
+iPDS_StatusSlave2_STATUS32
+iPDS_StatusSlave2_STATUS31
+iPDS_StatusSlave2_STATUS30
+iPDS_StatusSlave2_STATUS29
+iPDS_StatusSlave2_STATUS28
+iPDS_StatusSlave2_STATUS27
+iPDS_StatusSlave2_STATUS26
+iPDS_StatusSlave2_STATUS25
+iPDS_StatusSlave2_SCRIPT
+iPDS_StatusSlave2_MODE
+iPDS_StatusSlave2_INV3_OVERTEMP
+iPDS_StatusSlave2_INV3_OVERLOAD
+iPDS_StatusSlave2_INV3_STATUS
+iPDS_StatusSlave2_INV3_REQUEST
+iPDS_StatusSlave2_REVISION
+TrackedVehicle_3_TrkVeh_TrkActive
+TrackedVehicle_3_TrkVeh_LongRangeRate
+TrackedVehicle_3_TrkVeh_LongOffset
+TrackedVehicle_3_TrkVeh_LatRangeRate
+TrackedVehicle_3_TrkVeh_LatOffset
+TrackedVehicle_3_TrkVeh_InPath
+iPDS_StatusSlave3_STATUS48
+iPDS_StatusSlave3_STATUS47
+iPDS_StatusSlave3_STATUS46
+iPDS_StatusSlave3_STATUS45
+iPDS_StatusSlave3_STATUS44
+iPDS_StatusSlave3_STATUS43
+iPDS_StatusSlave3_STATUS42
+iPDS_StatusSlave3_STATUS41
+iPDS_StatusSlave3_STATUS40
+iPDS_StatusSlave3_STATUS39
+iPDS_StatusSlave3_STATUS38
+iPDS_StatusSlave3_STATUS37
+iPDS_StatusSlave3_SCRIPT
+iPDS_StatusSlave3_MODE
+iPDS_StatusSlave3_INV4_OVERTEMP
+iPDS_StatusSlave3_INV4_OVERLOAD
+iPDS_StatusSlave3_INV4_STATUS
+iPDS_StatusSlave3_INV4_REQUEST
+iPDS_StatusSlave3_REVISION
+TrackedVehicle_4_TrkVeh_TrkActive
+TrackedVehicle_4_TrkVeh_LongRangeRate
+TrackedVehicle_4_TrkVeh_LongOffset
+TrackedVehicle_4_TrkVeh_LatRangeRate
+TrackedVehicle_4_TrkVeh_LatOffset
+TrackedVehicle_4_TrkVeh_InPath
+iPDS_Current1Master_CURRENT4
+iPDS_Current1Master_CURRENT3
+iPDS_Current1Master_CURRENT2
+iPDS_Current1Master_CURRENT1
+TrackedVehicle_5_TrkVeh_TrkActive
+TrackedVehicle_5_TrkVeh_LongRangeRate
+TrackedVehicle_5_TrkVeh_LongOffset
+TrackedVehicle_5_TrkVeh_LatRangeRate
+TrackedVehicle_5_TrkVeh_LatOffset
+TrackedVehicle_5_TrkVeh_InPath
+iPDS_Current1Slave1_CURRENT16
+iPDS_Current1Slave1_CURRENT15
+iPDS_Current1Slave1_CURRENT14
+iPDS_Current1Slave1_CURRENT13
+TrackedVehicle_6_TrkVeh_TrkActive
+TrackedVehicle_6_TrkVeh_LongRangeRate
+TrackedVehicle_6_TrkVeh_LongOffset
+TrackedVehicle_6_TrkVeh_LatRangeRate
+TrackedVehicle_6_TrkVeh_LatOffset
+TrackedVehicle_6_TrkVeh_InPath
+iPDS_Current1Slave2_CURRENT28
+iPDS_Current1Slave2_CURRENT27
+iPDS_Current1Slave2_CURRENT26
+iPDS_Current1Slave2_CURRENT25
+TrackedVehicle_7_TrkVeh_TrkActive
+TrackedVehicle_7_TrkVeh_LongRangeRate
+TrackedVehicle_7_TrkVeh_LongOffset
+TrackedVehicle_7_TrkVeh_LatRangeRate
+TrackedVehicle_7_TrkVeh_LatOffset
+TrackedVehicle_7_TrkVeh_InPath
+iPDS_Current1Slave3_CURRENT40
+iPDS_Current1Slave3_CURRENT39
+iPDS_Current1Slave3_CURRENT38
+iPDS_Current1Slave3_CURRENT37
+TrackedVehicle_8_TrkVeh_TrkActive
+TrackedVehicle_8_TrkVeh_LongRangeRate
+TrackedVehicle_8_TrkVeh_LongOffset
+TrackedVehicle_8_TrkVeh_LatRangeRate
+TrackedVehicle_8_TrkVeh_LatOffset
+TrackedVehicle_8_TrkVeh_InPath
+iPDS_Current2Master_CURRENT8
+iPDS_Current2Master_CURRENT7
+iPDS_Current2Master_CURRENT6
+iPDS_Current2Master_CURRENT5
+iPDS_Current2Slave1_CURRENT20
+iPDS_Current2Slave1_CURRENT19
+iPDS_Current2Slave1_CURRENT18
+iPDS_Current2Slave1_CURRENT17
+iPDS_Current2Slave2_CURRENT32
+iPDS_Current2Slave2_CURRENT31
+iPDS_Current2Slave2_CURRENT30
+iPDS_Current2Slave2_CURRENT29
+iPDS_Current2Slave3_CURRENT44
+iPDS_Current2Slave3_CURRENT43
+iPDS_Current2Slave3_CURRENT42
+iPDS_Current2Slave3_CURRENT41
+iPDS_Current3Master_CURRENT12
+iPDS_Current3Master_CURRENT11
+iPDS_Current3Master_CURRENT10
+iPDS_Current3Master_CURRENT9
+iPDS_Current3Slave1_CURRENT24
+iPDS_Current3Slave1_CURRENT23
+iPDS_Current3Slave1_CURRENT22
+iPDS_Current3Slave1_CURRENT21
+iPDS_Current3Slave2_CURRENT36
+iPDS_Current3Slave2_CURRENT35
+iPDS_Current3Slave2_CURRENT34
+iPDS_Current3Slave2_CURRENT33
+iPDS_Current3Slave3_CURRENT48
+iPDS_Current3Slave3_CURRENT47
+iPDS_Current3Slave3_CURRENT46
+iPDS_Current3Slave3_CURRENT45
+iPDS_Reserved2_RESERVED2
+iPDS_Reserved3_RESERVED3
+iPDS_Reserved4_RESERVED4
+iPDS_Status2_Master_VOLTAGE
+iPDS_Status2_Master_THERMOCOUPLE
+iPDS_Status2_Master_BOARDTEMP
+iPDS_Status2_Slave1_VOLTAGE
+iPDS_Status2_Slave1_THERMOCOUPLE
+iPDS_Status2_Slave1_BOARDTEMP
+iPDS_Status2_Slave2_VOLTAGE
+iPDS_Status2_Slave2_THERMOCOUPLE
+iPDS_Status2_Slave2_BOARDTEMP
+iPDS_Status2_Slave3_VOLTAGE
+iPDS_Status2_Slave3_THERMOCOUPLE
+iPDS_Status2_Slave3_BOARDTEMP]]></ReadOnlyProperty>
+    <Property LongName="CANFDEncoder_1.selection" Type="3"><![CDATA[8]]></Property>
+    <Property LongName="CANFDEncoder_1.maxNbOfInputs" Type="1">30</Property>
+    <Property LongName="CANFDEncoder_1.readersMode" Type="4"><![CDATA[2|0|fifoReader|samplingReader]]></Property>
+    <Property LongName="CANFDEncoder_1.waitForMessageCompletion" Type="0">true</Property>
+    <Property LongName="CANFDEncoder_1.verbose" Type="0">false</Property>
+    <Property LongName="CANFDEncoder_1.threaded" Type="0">true</Property>
+    <Property LongName="CANFDEncoder_1.priority" Type="1">128</Property>
+    <Property LongName="CANFDEncoder_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CANFrameViewer_1" Model="CANFrameViewer" Version="1.5.3" x="904" y="200" z="0">
+    <Input LongName="CANFrameViewer_1.input0" Name="input0">
+      <Property LongName="CANFrameViewer_1.input0.readerType" Type="1">0</Property>
+      <Property LongName="CANFrameViewer_1.input0.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="CANFrameViewer_1.nbInputs" Type="1">1</Property>
+    <Property LongName="CANFrameViewer_1.nbMaxFrames" Type="1">0</Property>
+    <ReadOnlyProperty LongName="CANFrameViewer_1.resize" Type="0">true</ReadOnlyProperty>
+    <Property LongName="CANFrameViewer_1.title" Type="3"><![CDATA[CAN frame viewer]]></Property>
+    <Property LongName="CANFrameViewer_1.x" Type="1">746</Property>
+    <Property LongName="CANFrameViewer_1.y" Type="1">508</Property>
+    <Property LongName="CANFrameViewer_1.width" Type="1">639</Property>
+    <Property LongName="CANFrameViewer_1.height" Type="1">165</Property>
+    <Property LongName="CANFrameViewer_1.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="CANFrameViewer_1.priority" Type="1">128</Property>
+    <Property LongName="CANFrameViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="DataViewer_1" Model="DataViewer" Version="2.0.13" x="936" y="400" z="0">
+    <Input LongName="DataViewer_1.input_0" Name="input_0">
+      <Property LongName="DataViewer_1.input_0.readerType" Type="1">4</Property>
+      <Property LongName="DataViewer_1.input_0.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="DataViewer_1.input_1" Name="input_1">
+      <Property LongName="DataViewer_1.input_1.readerType" Type="1">4</Property>
+      <Property LongName="DataViewer_1.input_1.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="DataViewer_1.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="DataViewer_1.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="DataViewer_1.autoDirty" Type="0">true</Property>
+    <Property LongName="DataViewer_1.run" Type="0">true</Property>
+    <Property LongName="DataViewer_1.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="DataViewer_1.moveable" Type="0">true</Property>
+    <Property LongName="DataViewer_1.hidden" Type="0">false</Property>
+    <Property LongName="DataViewer_1.title" Type="3"><![CDATA[]]></Property>
+    <Property LongName="DataViewer_1.x" Type="1">193</Property>
+    <Property LongName="DataViewer_1.y" Type="1">480</Property>
+    <Property LongName="DataViewer_1.width" Type="1">530</Property>
+    <Property LongName="DataViewer_1.height" Type="1">420</Property>
+    <Property LongName="DataViewer_1.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="DataViewer_1.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="DataViewer_1.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="DataViewer_1.nbInputs" Type="1">2</Property>
+    <Property LongName="DataViewer_1.compactMode" Type="0">false</Property>
+    <Property LongName="DataViewer_1.showInfo" Type="0">true</Property>
+    <Property LongName="DataViewer_1.showData" Type="0">true</Property>
+    <Property LongName="DataViewer_1.showPrettyTimestamp" Type="0">true</Property>
+    <Property LongName="DataViewer_1.float32Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="DataViewer_1.float64Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="DataViewer_1.integer8Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer16Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer32Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer64Format" Type="3"><![CDATA[%ld]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger8Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger16Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger32Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger64Format" Type="3"><![CDATA[%lu]]></Property>
+    <Property LongName="DataViewer_1.hexDisplay" Type="0">false</Property>
+    <Property LongName="DataViewer_1.internalState" Type="3" SubType="128"><![CDATA[238;282]]></Property>
+    <Property LongName="DataViewer_1.expandedState" Type="3" SubType="128"><![CDATA[1|CANFDEncoder_1.oCANFDFrame;1|Info:CANFDEncoder_1.oCANFDFrame;1|Data:CANFDEncoder_1.oCANFDFrame;0|[0]:Data:CANFDEncoder_1.oCANFDFrame;0|]]></Property>
+    <ReadOnlyProperty LongName="DataViewer_1.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="DataViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="DataViewer_1.priority" Type="1">128</Property>
+    <Property LongName="DataViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="number_generator_1" Model="number_generator" Version="1.0.3" x="184" y="424" z="0">
+    <Output LongName="number_generator_1.o_int64" Name="o_int64">
+      <Property LongName="number_generator_1.o_int64.subsampling" Type="1">1</Property>
+      <Property LongName="number_generator_1.o_int64.fifosize" Type="1">16</Property>
+      <Property LongName="number_generator_1.o_int64.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="number_generator_1.p_output_type" Type="4"><![CDATA[10|5|Float32|Float64|Integer8|Integer16|Integer32|Integer64|UnsignedInteger8|UnsignedInteger16|UnsignedInteger32|UnsignedInteger64]]></Property>
+    <Property LongName="number_generator_1.p_output_mode" Type="4"><![CDATA[3|1|Once at Start|Periodic|Triggered]]></Property>
+    <Property LongName="number_generator_1.p_output_on_value_change" Type="0">true</Property>
+    <Property LongName="number_generator_1.p_vector_size" Type="1">1</Property>
+    <Property LongName="number_generator_1.p_output_period_us" Type="1" SubType="1">1000000</Property>
+    <Property LongName="number_generator_1.p_value_0" Type="3"><![CDATA[0]]></Property>
+    <Property LongName="number_generator_1.threaded" Type="0">true</Property>
+    <Property LongName="number_generator_1.priority" Type="1">128</Property>
+    <Property LongName="number_generator_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="numbers_converter_1" Model="numbers_converter" Version="1.1.3" x="336" y="616" z="0">
+    <Input LongName="numbers_converter_1.input" Name="input">
+      <Property LongName="numbers_converter_1.input.readerType" Type="1">0</Property>
+      <Property LongName="numbers_converter_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="numbers_converter_1.output" Name="output">
+      <Property LongName="numbers_converter_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="numbers_converter_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="numbers_converter_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="numbers_converter_1.outputType" Type="4"><![CDATA[10|3|Integer32|Integer64|Float32|Float64|Integer8|Integer16|UnsignedInteger8|UnsignedInteger16|UnsignedInteger32|UnsignedInteger64]]></Property>
+    <Property LongName="numbers_converter_1.threaded" Type="0">false</Property>
+    <Property LongName="numbers_converter_1.priority" Type="1">128</Property>
+    <Property LongName="numbers_converter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.iPDS_StatusMaster_STATUS8"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48"/>
+  <Connection Output="number_generator_1.o_int64" Input="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.iPDS_Current2Master_CURRENT8"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18"/>
+  <Connection Output="numbers_converter_1.output" Input="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48"/>
+  <Connection Output="CANFDEncoder_1.oCANFDFrame" Input="CANFrameViewer_1.input0"/>
+  <Connection Output="CANFDEncoder_1.oCANFDFrame" Input="DataViewer_1.input_0"/>
+  <Connection Output="number_generator_1.o_int64" Input="numbers_converter_1.input"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_2.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current2Master_CURRENT8" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusMaster_STATUS8" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_1.input0" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_2.input0" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_3.input" color="0"/>
+    <ConnectionShape InstanceName="Labelizer_1.inputGray" color="0"/>
+    <ConnectionShape InstanceName="numbers_converter_1.input" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Overlay_1.images" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.input" color="0"/>
+    <ConnectionShape InstanceName="SocketCAN_1.input" color="0"/>
+    <ConnectionShape InstanceName="SocketSender_1.input0" color="0"/>
+    <ConnectionShape InstanceName="Splitter_1.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_2.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_3.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

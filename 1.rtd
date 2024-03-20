@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.10" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="2.1.7"><![CDATA[/opt/rtmaps/packages/rtmaps_image_processing_miscellaneous.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_miscellaneous.pck]]></Relative></File>
+    <File Version="1.25.20"><![CDATA[/opt/rtmaps/packages/rtmaps_image_processing_opencv.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_opencv.pck]]></Relative></File>
+    <File Version="1.9.3"><![CDATA[/opt/rtmaps/packages/rtmaps_video4linux.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_video4linux.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="AnyColorSpaceConverter_1" Model="AnyColorSpaceConverter" Version="1.0.3" x="464" y="128" z="0">
+    <Input LongName="AnyColorSpaceConverter_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.readerType" Type="1">0</Property>
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1.outputPixelFormat" Type="4"><![CDATA[24|0|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputPlanar" Type="0">false</Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="AnyColorSpaceConverter_1_1" Model="AnyColorSpaceConverter" Version="1.0.3" x="376" y="384" z="0">
+    <Input LongName="AnyColorSpaceConverter_1_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1_1.imgInput.readerType" Type="1">0</Property>
+      <Property LongName="AnyColorSpaceConverter_1_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1_1.outputPixelFormat" Type="4"><![CDATA[24|2|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1_1.outputPlanar" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_2" Model="ImageViewer" Version="7.10.6" x="1064" y="248" z="0">
+    <Input LongName="ImageViewer_2.input" Name="input">
+      <Property LongName="ImageViewer_2.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_2.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_2.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_2.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_2.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_2.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_2.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_2.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_2.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_2.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_2.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_2.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_2.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_2.title" Type="3"><![CDATA[Image Viewer]]></Property>
+    <Property LongName="ImageViewer_2.x" Type="1">343</Property>
+    <Property LongName="ImageViewer_2.y" Type="1">418</Property>
+    <Property LongName="ImageViewer_2.width" Type="1">259</Property>
+    <Property LongName="ImageViewer_2.height" Type="1">194</Property>
+    <Property LongName="ImageViewer_2.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_2.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_2.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_2.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_2.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_2.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_2.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_2.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_2.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="OpenCV_HoughCircles_1" Model="OpenCV_HoughCircles" Version="1.0.2" x="584" y="384" z="0">
+    <Input LongName="OpenCV_HoughCircles_1.imageIn" Name="imageIn">
+      <Property LongName="OpenCV_HoughCircles_1.imageIn.readerType" Type="1">0</Property>
+      <Property LongName="OpenCV_HoughCircles_1.imageIn.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="OpenCV_HoughCircles_1.linesObjects" Name="linesObjects">
+      <Property LongName="OpenCV_HoughCircles_1.linesObjects.subsampling" Type="1">1</Property>
+      <Property LongName="OpenCV_HoughCircles_1.linesObjects.fifosize" Type="1">16</Property>
+      <Property LongName="OpenCV_HoughCircles_1.linesObjects.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="OpenCV_HoughCircles_1.accumulator_resolution" Type="2">2</Property>
+    <Property LongName="OpenCV_HoughCircles_1.min_dist_between_centers" Type="1">60</Property>
+    <Property LongName="OpenCV_HoughCircles_1.edges_threshold" Type="1">200</Property>
+    <Property LongName="OpenCV_HoughCircles_1.accumulator_threshold" Type="1">30</Property>
+    <Property LongName="OpenCV_HoughCircles_1.min_radius" Type="1">0</Property>
+    <Property LongName="OpenCV_HoughCircles_1.max_radius" Type="1">0</Property>
+    <Property LongName="OpenCV_HoughCircles_1.threaded" Type="0">true</Property>
+    <Property LongName="OpenCV_HoughCircles_1.priority" Type="1">128</Property>
+    <Property LongName="OpenCV_HoughCircles_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="OpenCV_Overlay_1" Model="OpenCV_Overlay" Version="2.3.2" x="768" y="128" z="0">
+    <Input LongName="OpenCV_Overlay_1.images" Name="images">
+      <Property LongName="OpenCV_Overlay_1.images.readerType" Type="1">0</Property>
+      <Property LongName="OpenCV_Overlay_1.images.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="OpenCV_Overlay_1.shape0" Name="shape0">
+      <Property LongName="OpenCV_Overlay_1.shape0.readerType" Type="1">0</Property>
+      <Property LongName="OpenCV_Overlay_1.shape0.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="OpenCV_Overlay_1.output" Name="output">
+      <Property LongName="OpenCV_Overlay_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="OpenCV_Overlay_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="OpenCV_Overlay_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="OpenCV_Overlay_1.nbOfInputs" Type="1">1</Property>
+    <Property LongName="OpenCV_Overlay_1.synchronization" Type="4"><![CDATA[2|0|on images|synchronized]]></Property>
+    <Property LongName="OpenCV_Overlay_1.synchrotolerance" Type="1">0</Property>
+    <Property LongName="OpenCV_Overlay_1.thickness" Type="1">1</Property>
+    <Property LongName="OpenCV_Overlay_1.drawbkg" Type="0">false</Property>
+    <Property LongName="OpenCV_Overlay_1.font" Type="4"><![CDATA[8|0|CV_FONT_HERSHEY_SIMPLEX|CV_FONT_HERSHEY_PLAIN|CV_FONT_HERSHEY_DUPLEX|CV_FONT_HERSHEY_COMPLEX|CV_FONT_HERSHEY_TRIPLEX|CV_FONT_HERSHEY_COMPLEX_SMALL|CV_FONT_HERSHEY_SCRIPT_SIMPLEX|CV_FONT_HERSHEY_SCRIPT_COMPLEX]]></Property>
+    <Property LongName="OpenCV_Overlay_1.italic" Type="0">false</Property>
+    <Property LongName="OpenCV_Overlay_1.fill_shape" Type="0">false</Property>
+    <Property LongName="OpenCV_Overlay_1.override_color" Type="0">false</Property>
+    <Property LongName="OpenCV_Overlay_1.threaded" Type="0">true</Property>
+    <Property LongName="OpenCV_Overlay_1.priority" Type="1">128</Property>
+    <Property LongName="OpenCV_Overlay_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="SocketSender_1" Model="SocketSender" Version="3.9.1" x="1056" y="88" z="0">
+    <Input LongName="SocketSender_1.input0" Name="input0">
+      <Property LongName="SocketSender_1.input0.readerType" Type="1">0</Property>
+      <Property LongName="SocketSender_1.input0.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="SocketSender_1.Type" Type="4"><![CDATA[3|0|TCP|UDP|Multicast]]></Property>
+    <Property LongName="SocketSender_1.Port" Type="1">11111</Property>
+    <Property LongName="SocketSender_1.DestinationIP" Type="3"><![CDATA[10.13.221.213]]></Property>
+    <Property LongName="SocketSender_1.Family" Type="4"><![CDATA[3|1|Auto|IPv4|IPv6]]></Property>
+    <Property LongName="SocketSender_1.ConnectTimeout" Type="1">3000000</Property>
+    <Property LongName="SocketSender_1.nbInputs" Type="1">1</Property>
+    <Property LongName="SocketSender_1.SendTimestamps" Type="0">true</Property>
+    <Property LongName="SocketSender_1.SendFrequency" Type="0">false</Property>
+    <Property LongName="SocketSender_1.SendQuality" Type="0">false</Property>
+    <Property LongName="SocketSender_1.SendMisc" Type="0">false</Property>
+    <Property LongName="SocketSender_1.TOS" Type="4"><![CDATA[5|0|None|Low Delay|Throughput|Reliability|Low Cost]]></Property>
+    <Property LongName="SocketSender_1.Verbose" Type="0">false</Property>
+    <Property LongName="SocketSender_1.input_0_name" Type="3"><![CDATA[]]></Property>
+    <Property LongName="SocketSender_1.NbConnectionAttempts" Type="1">0</Property>
+    <Property LongName="SocketSender_1.TcpNoDelay" Type="0">true</Property>
+    <Property LongName="SocketSender_1.KeepalivePeriod" Type="1">0</Property>
+    <Property LongName="SocketSender_1.threaded" Type="0">true</Property>
+    <Property LongName="SocketSender_1.priority" Type="1">128</Property>
+    <Property LongName="SocketSender_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Video4Linux_1" Model="Video4Linux" Version="3.9.5" x="160" y="280" z="0">
+    <Output LongName="Video4Linux_1.output" Name="output">
+      <Property LongName="Video4Linux_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Video4Linux_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Video4Linux_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="Video4Linux_1.device_selection" Type="4"><![CDATA[2|0|List|Path]]></Property>
+    <Property LongName="Video4Linux_1.device" Type="4"><![CDATA[2|1|N/A|0: HD Pro Webcam C920]]></Property>
+    <Property LongName="Video4Linux_1.channel" Type="4"><![CDATA[2|1|N/A|0: Camera 1]]></Property>
+    <Property LongName="Video4Linux_1.format" Type="4"><![CDATA[3|1|N/A|YUYV|MJPG]]></Property>
+    <Property LongName="Video4Linux_1.standard" Type="4"><![CDATA[1|0|N/A]]></Property>
+    <Property LongName="Video4Linux_1.image_size" Type="3"><![CDATA[320x240]]></Property>
+    <Property LongName="Video4Linux_1.Brightness" Type="1">128</Property>
+    <Property LongName="Video4Linux_1.Contrast" Type="1">128</Property>
+    <Property LongName="Video4Linux_1.Saturation" Type="1">128</Property>
+    <Property LongName="Video4Linux_1.White_Balance_Temperature__Auto" Type="0">true</Property>
+    <Property LongName="Video4Linux_1.Gain" Type="1">0</Property>
+    <Property LongName="Video4Linux_1.White_Balance_Temperature" Type="1">4000</Property>
+    <Property LongName="Video4Linux_1.Sharpness" Type="1">128</Property>
+    <Property LongName="Video4Linux_1.Backlight_Compensation" Type="1">0</Property>
+    <Property LongName="Video4Linux_1.threaded" Type="0">true</Property>
+    <Property LongName="Video4Linux_1.priority" Type="1">255</Property>
+    <Property LongName="Video4Linux_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="Video4Linux_1.output" Input="AnyColorSpaceConverter_1.imgInput"/>
+  <Connection Output="Video4Linux_1.output" Input="AnyColorSpaceConverter_1_1.imgInput"/>
+  <Connection Output="OpenCV_Overlay_1.output" Input="ImageViewer_2.input"/>
+  <Connection Output="AnyColorSpaceConverter_1_1.IplImageOutput" Input="OpenCV_HoughCircles_1.imageIn"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="OpenCV_Overlay_1.images"/>
+  <Connection Output="OpenCV_HoughCircles_1.linesObjects" Input="OpenCV_Overlay_1.shape0"/>
+  <Connection Output="OpenCV_Overlay_1.output" Input="SocketSender_1.input0"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="AnyColorSpaceConverter_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_2.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current1Slave2_CURRENT28" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current1Slave3_CURRENT38" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current2Master_CURRENT8" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current2Slave1_CURRENT18" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_Current3Slave3_CURRENT48" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusMaster_STATUS8" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave1_STATUS18" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave2_STATUS28" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS38" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.iPDS_StatusSlave3_STATUS48" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_InPath" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatOffset" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LatRangeRate" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongOffset" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_LongRangeRate" color="0"/>
+    <ConnectionShape InstanceName="CANFDEncoder_1.TrackedVehicle_8_TrkVeh_TrkActive" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_1.input0" color="0"/>
+    <ConnectionShape InstanceName="CANFrameViewer_2.input0" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_2.input" color="0"/>
+    <ConnectionShape InstanceName="numbers_converter_1.input" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_HoughCircles_1.imageIn" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_HoughCircles_1_1.imageIn" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Overlay_1.images" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Overlay_1.shape0" color="0"/>
+    <ConnectionShape InstanceName="SocketCAN_1.input" color="0"/>
+    <ConnectionShape InstanceName="SocketSender_1.input0" color="0"/>
+    <ConnectionShape InstanceName="Splitter_1.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_2.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_3.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>
